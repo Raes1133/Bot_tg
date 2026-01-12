@@ -3,7 +3,6 @@ import asyncio
 import logging
 import sqlite3
 from datetime import datetime, timedelta, timezone
-from zoneinfo import ZoneInfo
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command
 from aiogram.fsm.state import State, StatesGroup
@@ -17,8 +16,8 @@ from aiogram.types import (
 )
 from aiogram.utils.keyboard import InlineKeyboardBuilder, ReplyKeyboardBuilder
 
-# Часовой пояс UTC+7 (Asia/Krasnoyarsk, Asia/Bangkok, Asia/Jakarta и др.)
-TIMEZONE = ZoneInfo("Asia/Krasnoyarsk")  # UTC+7
+# Часовой пояс UTC+7 (фиксированное смещение, работает везде без дополнительных зависимостей)
+TIMEZONE = timezone(timedelta(hours=7))  # UTC+7
 
 # Настройка логирования
 logging.basicConfig(
