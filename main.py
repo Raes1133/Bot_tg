@@ -31,7 +31,7 @@ API_TOKEN = os.getenv('API_TOKEN')
 if not API_TOKEN:
     logger.error("API_TOKEN не установлен! Проверьте переменные окружения в Railway.")
     # Для локального тестирования можно использовать дефолтный токен
-    API_TOKEN = "8550171475:AAGVRnxjB6f49XAUpuQ-2TWXuwdxN67HG0s"
+    API_TOKEN = "8212761274:AAEqNRcPe81h1ZOi-4-CP3riFWomi84vZjw"
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
@@ -1004,7 +1004,7 @@ async def main():
 
 if __name__ == "__main__":
     # Проверяем наличие токена
-    if API_TOKEN == "8550171475:AAGVRnxjB6f49XAUpuQ-2TWXuwdxN67HG0s":
+    if API_TOKEN == "8212761274:AAEqNRcPe81h1ZOi-4-CP3riFWomi84vZjw":
         logger.warning("⚠️  Используется дефолтный токен. Установите переменную окружения API_TOKEN на Railway!")
 
     try:
